@@ -10,11 +10,10 @@ const initGallery = function(element) {
     if (!currentThumb || !element.contains(currentThumb)) {
       return;
     }
-    const newPath = currentThumb
-      .closest('.list-item__link')
-      .getAttribute('href');
+    const newPath = currentThumb.getAttribute('href');
     largeImg.setAttribute('src', newPath);
   });
 };
 
-initGallery(document.querySelector('.gallery'));
+const gallery = document.querySelector('.gallery');
+initGallery(gallery);
